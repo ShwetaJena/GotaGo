@@ -12,7 +12,8 @@ class ExSlideMenuController : SlideMenuController {
 
     override func isTagetViewController() -> Bool {
         if let vc = UIApplication.topViewController() {
-            if vc is DashBoardViewController {
+            if vc is SplashScreenController ||
+            vc is DashBoardViewController {
                 return true
             }
         }

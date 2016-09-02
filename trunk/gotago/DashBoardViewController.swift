@@ -21,6 +21,8 @@ class DashBoardViewController: UIViewController, UICollectionViewDelegate {
     @IBOutlet weak var currentUserProfileImageButton: UIButton!
     @IBOutlet weak var currentUserFullNameButton: UIButton!
     
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var contentView : UIView!
     
     private var interests = Interest.createInterests()
     private var locations = Locations.createLocations()
@@ -29,8 +31,6 @@ class DashBoardViewController: UIViewController, UICollectionViewDelegate {
     
     let searchController = UISearchController(searchResultsController: nil)
     
-    let interactor = Interactor()
-    
     private func createMenuView() {
         
         // create viewController code...
@@ -38,9 +38,11 @@ class DashBoardViewController: UIViewController, UICollectionViewDelegate {
         
         let mainViewController = storyboard.instantiateViewControllerWithIdentifier("DashBoardViewController") as! DashBoardViewController
         let leftViewController = storyboard.instantiateViewControllerWithIdentifier("LeftViewController") as! LeftViewController
-        //        let rightViewController = storyboard.instantiateViewControllerWithIdentifier("RightViewController") as! RightViewController
         
         let nvc: UINavigationController = UINavigationController(rootViewController: mainViewController)
+        
+//        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+//        appDelegate.window?.rootViewController = nvc
         
         UINavigationBar.appearance().tintColor = UIColor(hex: "689F38")
         
@@ -49,10 +51,11 @@ class DashBoardViewController: UIViewController, UICollectionViewDelegate {
         let slideMenuController = ExSlideMenuController(mainViewController:nvc, leftMenuViewController: leftViewController)
         slideMenuController.automaticallyAdjustsScrollViewInsets = true
         slideMenuController.delegate = mainViewController
-        self.window?.backgroundColor = UIColor(red: 236.0, green: 238.0, blue: 241.0, alpha: 1.0)
-        self.window?.rootViewController = slideMenuController
-        self.window?.makeKeyAndVisible()
+//        appDelegate.window?.backgroundColor = UIColor(red: 236.0, green: 238.0, blue: 241.0, alpha: 1.0)
+//        appDelegate.window?.rootViewController = slideMenuController
+//        appDelegate.window?.makeKeyAndVisible()
     }
+    
     
     override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransitionToSize(size, withTransitionCoordinator: coordinator)
@@ -64,29 +67,20 @@ class DashBoardViewController: UIViewController, UICollectionViewDelegate {
         self.createMenuView()
     }
     
-    @IBAction func openMenu(sender: AnyObject) {
-        performSegueWithIdentifier("openMenu", sender: nil)
-    }
-    
-    @IBAction func edgePanGesture(sender: UIScreenEdgePanGestureRecognizer) {
-        let translation = sender.translationInView(view)
+    override func viewDidLayoutSubviews()
+    {
+        let scrollViewBounds = scrollView.bounds
+        let contentViewBounds = contentView.bounds
         
-        let progress = MenuHelper.calculateProgress(translation, viewBounds: view.bounds, direction: .Right)
+        var scrollViewInsets = UIEdgeInsetsZero
+        scrollViewInsets.top = scrollViewBounds.size.height;
+        scrollViewInsets.top -= contentViewBounds.size.height;
         
-        MenuHelper.mapGestureStateToInteractor(
-            sender.state,
-            progress: progress,
-            interactor: interactor) {
-                self.performSegueWithIdentifier("openMenu", sender: nil)
-        }
-    }
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if let destinationViewController = segue.destinationViewController as? MenuViewController {
-            destinationViewController.transitioningDelegate = self
-            destinationViewController.interactor = interactor
-            destinationViewController.menuActionDelegate = self
-         }
+        scrollViewInsets.bottom = scrollViewBounds.size.height
+        scrollViewInsets.bottom = contentViewBounds.size.height/2.0 + 60.0;
+        scrollViewInsets.bottom += 1
+        
+        scrollView.contentInset = scrollViewInsets
     }
     
     override func viewDidLoad() {
@@ -123,33 +117,6 @@ class DashBoardViewController: UIViewController, UICollectionViewDelegate {
         }
     }
     
-}
-
-
-extension DashBoardViewController: UIViewControllerTransitioningDelegate {
-    func animationContrllerForPresentedController(presented: UIViewController, presentingController presenting:UIViewController, sourceController source:UIViewController) -> UIViewControllerAnimatedTransitioning {
-        return PresentMenuAnimator()
-    }
-    
-    func animationControllerForDismissiedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning {
-        return DismissMenuAnimator()
-    }
-    
-    func interactionControllerForDismissal(animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
-        return interactor.hasStarted ? interactor : nil
-    }
-    
-    func interactionControllerForPresentation(animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
-        return interactor.hasStarted ? interactor : nil
-    }
-}
-
-extension DashBoardViewController : MenuActionDelegate {
-    func openSegue(segueName: String, sender: AnyObject?) {
-        dismissViewControllerAnimated(true) {
-            self.performSegueWithIdentifier(segueName, sender: sender)
-        }
-    }
 }
 
 extension DashBoardViewController: UICollectionViewDataSource {

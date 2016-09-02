@@ -9,15 +9,10 @@
 /* Begin PBXBuildFile section */
 		200B03D8158A32462E5B402F /* Pods_gotago.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C43557B156FA3D2BE9C36BC /* Pods_gotago.framework */; };
 		3B90BB981D7564CB00DF6201 /* DashBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B90BB971D7564CB00DF6201 /* DashBoardViewController.swift */; };
-		3B90BB9A1D7565D500DF6201 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B90BB991D7565D500DF6201 /* MenuViewController.swift */; };
 		3B90BBAC1D75724D00DF6201 /* InterestCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B90BBA31D75724D00DF6201 /* InterestCollectionViewCell.swift */; };
 		3B90BBAD1D75724D00DF6201 /* LocationsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B90BBA41D75724D00DF6201 /* LocationsCollectionViewCell.swift */; };
-		3B90BBAE1D75724D00DF6201 /* DismissMenuAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B90BBA61D75724D00DF6201 /* DismissMenuAnimator.swift */; };
-		3B90BBAF1D75724D00DF6201 /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B90BBA71D75724D00DF6201 /* Interactor.swift */; };
 		3B90BBB01D75724D00DF6201 /* Interest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B90BBA81D75724D00DF6201 /* Interest.swift */; };
 		3B90BBB11D75724D00DF6201 /* Locations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B90BBA91D75724D00DF6201 /* Locations.swift */; };
-		3B90BBB21D75724D00DF6201 /* MenuHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B90BBAA1D75724D00DF6201 /* MenuHelper.swift */; };
-		3B90BBB31D75724D00DF6201 /* PresentMenuAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B90BBAB1D75724D00DF6201 /* PresentMenuAnimator.swift */; };
 		3B90BBB51D757E0600DF6201 /* SlideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B90BBB41D757E0600DF6201 /* SlideMenuController.swift */; };
 		3B90BBBF1D757EA900DF6201 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B90BBB71D757EA900DF6201 /* String.swift */; };
 		3B90BBC01D757EA900DF6201 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B90BBB81D757EA900DF6201 /* UIApplication.swift */; };
@@ -32,6 +27,7 @@
 		3B90BBCE1D75824700DF6201 /* ImageHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B90BBCC1D75824700DF6201 /* ImageHeaderView.swift */; };
 		3B90BBCF1D75824700DF6201 /* ImageHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B90BBCD1D75824700DF6201 /* ImageHeaderView.xib */; };
 		3B90BBD11D7582F400DF6201 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B90BBD01D7582F400DF6201 /* BaseTableViewCell.swift */; };
+		3BFC65DE1D79293D0080F00E /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BFC65DD1D79293D0080F00E /* SWRevealViewController.m */; };
 		463763D01D1ABECD0097ABAE /* SetupProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463763CF1D1ABECD0097ABAE /* SetupProfileController.swift */; };
 		4679CF601D1A5AA700EC26E7 /* SauceCodeDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4679CF5F1D1A5AA700EC26E7 /* SauceCodeDevice.swift */; };
 		467E2C791D0773A000D81E58 /* GetStartedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467E2C781D0773A000D81E58 /* GetStartedViewController.swift */; };
@@ -158,15 +154,10 @@
 		30D7D794544ADC8A5EC57463 /* Pods-gotagoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gotagoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-gotagoUITests/Pods-gotagoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		39A4555F595559CA6F907E71 /* Pods-gotagoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gotagoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-gotagoUITests/Pods-gotagoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		3B90BB971D7564CB00DF6201 /* DashBoardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashBoardViewController.swift; sourceTree = "<group>"; };
-		3B90BB991D7565D500DF6201 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		3B90BBA31D75724D00DF6201 /* InterestCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterestCollectionViewCell.swift; sourceTree = "<group>"; };
 		3B90BBA41D75724D00DF6201 /* LocationsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationsCollectionViewCell.swift; sourceTree = "<group>"; };
-		3B90BBA61D75724D00DF6201 /* DismissMenuAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DismissMenuAnimator.swift; sourceTree = "<group>"; };
-		3B90BBA71D75724D00DF6201 /* Interactor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
 		3B90BBA81D75724D00DF6201 /* Interest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interest.swift; sourceTree = "<group>"; };
 		3B90BBA91D75724D00DF6201 /* Locations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Locations.swift; sourceTree = "<group>"; };
-		3B90BBAA1D75724D00DF6201 /* MenuHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuHelper.swift; sourceTree = "<group>"; };
-		3B90BBAB1D75724D00DF6201 /* PresentMenuAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentMenuAnimator.swift; sourceTree = "<group>"; };
 		3B90BBB41D757E0600DF6201 /* SlideMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideMenuController.swift; sourceTree = "<group>"; };
 		3B90BBB71D757EA900DF6201 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = String.swift; path = Extensions/String.swift; sourceTree = "<group>"; };
 		3B90BBB81D757EA900DF6201 /* UIApplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIApplication.swift; path = Extensions/UIApplication.swift; sourceTree = "<group>"; };
@@ -182,6 +173,8 @@
 		3B90BBCC1D75824700DF6201 /* ImageHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageHeaderView.swift; sourceTree = "<group>"; };
 		3B90BBCD1D75824700DF6201 /* ImageHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageHeaderView.xib; sourceTree = "<group>"; };
 		3B90BBD01D7582F400DF6201 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		3BFC65DC1D79293D0080F00E /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		3BFC65DD1D79293D0080F00E /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		3C43557B156FA3D2BE9C36BC /* Pods_gotago.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_gotago.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		463763C81D1A83BB0097ABAE /* gotago-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "gotago-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		463763CF1D1ABECD0097ABAE /* SetupProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SetupProfileController.swift; path = controller/SetupProfileController.swift; sourceTree = "<group>"; };
@@ -317,14 +310,19 @@
 		3B90BBA51D75724D00DF6201 /* Custom Controls */ = {
 			isa = PBXGroup;
 			children = (
-				3B90BBA61D75724D00DF6201 /* DismissMenuAnimator.swift */,
-				3B90BBA71D75724D00DF6201 /* Interactor.swift */,
 				3B90BBA81D75724D00DF6201 /* Interest.swift */,
 				3B90BBA91D75724D00DF6201 /* Locations.swift */,
-				3B90BBAA1D75724D00DF6201 /* MenuHelper.swift */,
-				3B90BBAB1D75724D00DF6201 /* PresentMenuAnimator.swift */,
 			);
 			path = "Custom Controls";
+			sourceTree = "<group>";
+		};
+		3BFC65DB1D79293D0080F00E /* SWRevealController */ = {
+			isa = PBXGroup;
+			children = (
+				3BFC65DC1D79293D0080F00E /* SWRevealViewController.h */,
+				3BFC65DD1D79293D0080F00E /* SWRevealViewController.m */,
+			);
+			path = SWRevealController;
 			sourceTree = "<group>";
 		};
 		4679CF5E1D1A5A8800EC26E7 /* Device */ = {
@@ -450,6 +448,7 @@
 		46AE5FBC1CFC9D1A00560784 = {
 			isa = PBXGroup;
 			children = (
+				3BFC65DB1D79293D0080F00E /* SWRevealController */,
 				463763C81D1A83BB0097ABAE /* gotago-Bridging-Header.h */,
 				46AE5FC71CFC9D1A00560784 /* gotago */,
 				46AE5FDF1CFC9D1A00560784 /* gotagoTests */,
@@ -511,7 +510,6 @@
 			isa = PBXGroup;
 			children = (
 				3B90BBCA1D7581DC00DF6201 /* LeftViewController.swift */,
-				3B90BB991D7565D500DF6201 /* MenuViewController.swift */,
 				3B90BB971D7564CB00DF6201 /* DashBoardViewController.swift */,
 				46AE60211D00A6CE00560784 /* walkthrough */,
 				46AE60111CFE040F00560784 /* SplashScreenController.swift */,
@@ -934,10 +932,8 @@
 				467E2D271D0AEA8A00D81E58 /* OpenSansFont.swift in Sources */,
 				3B90BBC81D757EEC00DF6201 /* ExSlideMenuController.swift in Sources */,
 				3B90BBB11D75724D00DF6201 /* Locations.swift in Sources */,
-				3B90BB9A1D7565D500DF6201 /* MenuViewController.swift in Sources */,
 				46AE60121CFE040F00560784 /* SplashScreenController.swift in Sources */,
 				467E2D321D0AF8B800D81E58 /* BaseViewController.swift in Sources */,
-				3B90BBAE1D75724D00DF6201 /* DismissMenuAnimator.swift in Sources */,
 				3B90BB981D7564CB00DF6201 /* DashBoardViewController.swift in Sources */,
 				467E2D221D0AC36200D81E58 /* SauceCodeFont.swift in Sources */,
 				467E2D2B1D0AEFF200D81E58 /* SauceCode+UIFont.swift in Sources */,
@@ -947,17 +943,15 @@
 				46AE5FD11CFC9D1A00560784 /* gotago.xcdatamodeld in Sources */,
 				467E2CFC1D08B3B400D81E58 /* BeginAuthViewController.swift in Sources */,
 				3B90BBC51D757EA900DF6201 /* UIView.swift in Sources */,
-				3B90BBB31D75724D00DF6201 /* PresentMenuAnimator.swift in Sources */,
 				4679CF601D1A5AA700EC26E7 /* SauceCodeDevice.swift in Sources */,
 				46AE5FCB1CFC9D1A00560784 /* ViewController.swift in Sources */,
 				3B90BBBF1D757EA900DF6201 /* String.swift in Sources */,
 				3B90BBC41D757EA900DF6201 /* UITableViewExtension.swift in Sources */,
-				3B90BBAF1D75724D00DF6201 /* Interactor.swift in Sources */,
 				46AE5FC91CFC9D1A00560784 /* AppDelegate.swift in Sources */,
 				3B90BBCB1D7581DC00DF6201 /* LeftViewController.swift in Sources */,
 				3B90BBCE1D75824700DF6201 /* ImageHeaderView.swift in Sources */,
-				3B90BBB21D75724D00DF6201 /* MenuHelper.swift in Sources */,
 				3B90BBC11D757EA900DF6201 /* UIColor.swift in Sources */,
+				3BFC65DE1D79293D0080F00E /* SWRevealViewController.m in Sources */,
 				467E2C791D0773A000D81E58 /* GetStartedViewController.swift in Sources */,
 				463763D01D1ABECD0097ABAE /* SetupProfileController.swift in Sources */,
 				3B90BBB51D757E0600DF6201 /* SlideMenuController.swift in Sources */,
